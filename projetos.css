@@ -135,7 +135,7 @@ input:checked + .slider:before {
   background-position: center;
   background-color: rgba(237, 189, 17, 1);
   background-blend-mode: luminosity;
-  min-height: 100vh;
+  min-height: 93.4vh;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -223,14 +223,6 @@ button a {
 #acesse {
   transition: 0.5s;
 }
-
-
-
-
-
-
-
-
 /* Responsive Media Queries */
 @media (min-width: 1440px) {
   .wrapper {
@@ -248,7 +240,7 @@ button a {
 
   #texto {
     font-size: 20px;
-    max-width: 600px;
+    max-width: 500px;
   }
 }
 
@@ -332,5 +324,4 @@ button a {
 
   
 }
-    #texto{margin-left: 30%;}
 }
