@@ -1,4 +1,4 @@
-body {
+/*body { 
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -198,5 +198,280 @@ background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba
   #rodape{
     margin-top: 6.3vh;
     height: 7.8vh;
+  }
+}
+*/
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(220, 121, 30, 1) 0%, rgba(204, 162, 15, 1) 35%, rgba(237, 189, 17, 1) 100%);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 146, 255, 1) 100%);
+}
+
+.dark a {
+  text-decoration: none;
+  color: white;
+}
+
+.dark a img {
+  filter: invert();
+}
+
+/* Header styling */
+#header {
+  display: flex;
+  padding: 30px 3% 0 3%;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+/* Toggle switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 39%;
+}
+
+.switch input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 196, 0);
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #808080;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Navigation icons */
+.div1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6em 1.5em;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.div1:hover {
+  background-color: rgba(99, 99, 99, 0.7);
+  transform: scale(1.05);
+}
+
+.div1 img {
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.div1:hover img {
+  transform: translateY(-3px);
+}
+
+/* Center content styling */
+#centerPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+#divImagem {
+  text-align: center;
+}
+
+#divImagem img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#divImagem img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+#text1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Typing animation */
+.wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 18.5ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/* Footer styling */
+#rodape {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(88, 88, 88, 0.9);
+  margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  #divImagem img {
+    height: 300px;
+    width: 300px;
+  }
+  
+  #text1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 992px) {
+  #centerPage {
+    padding-top: 2rem;
+  }
+  
+  .switch {
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 20px 3%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .switch {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    order: -1;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #centerPage {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
+  }
+  
+  #divImagem {
+    padding-left: 0;
+  }
+  
+  #divImagem img {
+    height: 200px;
+    width: 200px;
+  }
+  
+  #text1 {
+    padding-left: 0;
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .div1 {
+    padding: 0.4em 1em;
+  }
+  
+  #divImagem img {
+    height: 180px;
+    width: 180px;
+  }
+  
+  #text1 {
+    font-size: 28px;
+  }
+  
+  .typing-demo {
+    width: 100%;
   }
 }
