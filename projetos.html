@@ -4,38 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Projetos</title>
+    <title>My Projects</title>
     <link rel="stylesheet" href="projetos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="darkmode.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="header">
-        <label class="switch">
-            <input type="checkbox" id="check" onclick="darkmode()">
-            <span class="slider round"></span>
-        </label>
-        
-        <a href="index.html">
-            <img src="Home.png" alt="Home">
-        </a>
-    </div>
-    
-    <div id="center">
-        <div id="titulo">
-            <img src="Github.png" alt="Github icon">
-            <h1>PROJETOS</h1>
-        </div>
-        <div id="texto">
-            Clique no botão abaixo e veja todos meu projetos diretamente no meu github
-            <br>
-            <button id="acesse">
-                <a href="https://github.com/gabriel-castro-dev" target="_blank">Acesse aqui</a>
-            </button>
-        </div>
+    <div class="container">
+        <header>
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="check" onclick="darkmode()">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">Dark Mode</span>
+            </div>
+            <a href="index.html" class="home-link">
+                <img src="Home.png" alt="Home">
+                <span>Home</span>
+            </a>
+        </header>
+
+        <main>
+            <div class="title-container">
+                <div class="title-icon">
+                    <img src="Github.png" alt="Github icon">
+                </div>
+                <h1>PROJETOS</h1>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="projects-container">
+                <div class="projects-card">
+                    <p class="projects-message">
+                        Clique no botão abaixo e veja todos meu projetos diretamente no meu github
+                    </p>
+                    <button class="github-button">
+                        <a href="https://github.com/gabriel-castro-dev" target="_blank">
+                            Veja os projetos
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="background-overlay"></div>
+        </footer>
     </div>
 </body>
 </html>
