@@ -7,56 +7,90 @@
     <link rel="stylesheet" href="sobremim.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="darkmode.js" defer></script>
 </head>
 <body>
-    <div id="header">
-        <label for="" class="switch">
-            <input type="checkbox" id="check" onclick="darkmode()">
-            <span class="slider round"></span>
-        </label>
-        
-        <a href="index.html">
-        <img src="Home.png" alt="">
-        </a>
-    </div>
-    <div id="center">
-        <div class="text">
-            <h1>
-                SOBRE <br> MIM
-            </h1>
-            Olá! Sou Gabriel, desenvolvedor Back-End com experiência em C#, .NET, ASP.NET, SQL, focado em criar soluções eficientes e escaláveis. Conhecimento em redes, segurança da informação e suporte técnico, proporcionando uma visão ampla da infraestrutura de TI.
-Sempre em busca de novos desafios para expandir conhecimentos e aplicar expertise em projetos inovadores. Aberto a conexões e oportunidades para contribuir em soluções de alto impacto.
-        </div>
-        <div class="text">
-            <h1>
-                EXPERIÊNCIAS
-            </h1>
-            <div id="divBook">
-            <img src="Book open.png" alt="" id="imgBook">
+    <div class="container">
+        <header>
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="check" onclick="darkmode()">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">Dark Mode</span>
             </div>
-            Monitor de Robótica e Programação, ministrando formações para
-         estudantes da Rede Municipal de Ensino, desde de crianças a
-         adolescentes, entre 3 a 17 anos. Os cursos eram oferecidos com material
-         de robótica educacional LEGO Spike Prime, e também era apresentada a
-         lógica de programação aos alunos, utilizando de plataformas como o
-         Scratch e Scratch Jr
-        </div>
-    </div>
-    <div id="rodape">
-        <div>
-            <img src="hexagon-2307350_1280 1.png" alt="">
-        </div>
-        <div>
-        <img src="9850812 1.png " alt="">
-        </div>
-        <div>
-            <img src="c-icon-455x512-nnvx09v8 1.png" alt="">
-        </div>
-        <div>
-            <img src="javascript-logo-javascript-icon-transparent-free-png 1.png" alt="">
-        </div>
+            <a href="index.html" class="home-link">
+                <img src="Home.png" alt="Home">
+                <span>Home</span>
+            </a>
+        </header>
+
+        <main>
+            <div class="title-container">
+                <h1>SOBRE MIM</h1>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-container">
+                <div class="about-card">
+                    <div class="about-section">
+                        <div class="section-title">
+                            <h2>PERFIL</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="experience-item">
+                            <div class="icon-container">
+                                <img src="homem-usuario.png" alt="Experiência">
+                            </div>
+                            <p>Olá! Sou Gabriel, desenvolvedor Back-End com experiência em C#, .NET, ASP.NET, SQL, focado em criar soluções eficientes e escaláveis. Conhecimento em redes, segurança da informação e suporte técnico, proporcionando uma visão ampla da infraestrutura de TI.</p>
+                            <p>Sempre em busca de novos desafios para expandir conhecimentos e aplicar expertise em projetos inovadores. Aberto a conexões e oportunidades para contribuir em soluções de alto impacto.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <div class="section-title">
+                            <h2>EXPERIÊNCIAS</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="experience-item">
+                                <div class="icon-container2">
+                                    <img src="Book open.png" alt="Experiência">
+                                </div>
+                                <p>Monitor de Robótica e Programação, ministrando formações para estudantes da Rede Municipal de Ensino, desde de crianças a adolescentes, entre 3 a 17 anos. Os cursos eram oferecidos com material de robótica educacional LEGO Spike Prime, e também era apresentada a lógica de programação aos alunos, utilizando de plataformas como o Scratch e Scratch Jr.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-title">
+                    <h2>TECNOLOGIAS</h2>
+                </div>
+                <div class="skills-icons">
+                    <div class="skill-icon">
+                        <img src="hexagon-2307350_1280 1.png" alt="Tecnologia">
+                    </div>
+                    <div class="skill-icon">
+                        <img src="9850812 1.png" alt="Tecnologia">
+                    </div>
+                    <div class="skill-icon">
+                        <img src="c-icon-455x512-nnvx09v8 1.png" alt="Tecnologia">
+                    </div>
+                    <div class="skill-icon">
+                        <img src="javascript-logo-javascript-icon-transparent-free-png 1.png" alt="Tecnologia">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-illustration">
+                <img src="hand-5307564_1280 1.png" alt="Hand illustration">
+            </div>
+        </footer>
     </div>
 </body>
 </html>
